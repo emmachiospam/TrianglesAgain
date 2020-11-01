@@ -27,10 +27,10 @@ public class Triangle{
       return "it is an equilateral triangle";
     }
     else if (v1.distanceTo(v2) == v2.distanceTo(v3) || v2.distanceTo(v3) == v3.distanceTo(v1) || v3.distanceTo(v1) == v1.distanceTo(v2)) {
-      return "it is an isosceles";
+      return "it is an isosceles triangle";
     }
     else {
-      return "it is a scalene";
+      return "it is a scalene triangle";
     }
   }
 
