@@ -17,4 +17,20 @@ public class Triangle{
     return (v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1));
   }
 
+  public double getArea() {
+    double semi = getPerimeter() / 2;
+    return Math.sqrt((semi * (semi - v1.distanceTo(v2)) * (semi - v2.distanceTo(v3)) * (semi - v3.distanceTo(v1))));
+  }
+
+  public String classify() {
+    if ((v1.distanceTo(v2) == v2.distanceTo(v3)) && v1.distanceTo(v2) == v3.distanceTo(v1)) {
+      return "it is an equilateral triangle";
+    }
+    else if (v1.distanceTo(v2) == v2.distanceTo(v3) || v2.distanceTo(v3) == v3.distanceTo(v1) || v3.distanceTo(v1) == v1.distanceTo(v2)) {
+      return "it is an isosceles";
+    }
+    else {
+      return "it is a scalene";
+    }
+  }
 }
